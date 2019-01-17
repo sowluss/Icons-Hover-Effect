@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.s1 {
+  background: #69779b;
+}
+
+.s2 {
+  background: #1b335f;
+}
+
+.s3 {
+  background: #f05a28;
+}
+
+.s4 {
+  background: #3e3838;
+}
+
+.iconbtn {
+  width: 80px;
+  height: 80px;
+  text-decoration: none;
+  margin: 20px;
+  position: relative;
+  font-size: 2.5rem;
+  border-radius: 50%;
+}
+
+.iconbtn::before {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iconbtn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.s1 .iconbtn,
+.s2 .iconbtn {
+  color: #fff;
+}
+
+.s1 .iconbtn::after {
+  border: 4px dotted #fff;
+}
+
+.s1 .iconbtn:hover::after {
+  animation: ro 7s linear infinite;
+}
+
+.s2 .iconbtn {
+  border: 4px solid;
+}
+
+.s2 .iconbtn:hover {
+  animation: ro 2s linear infinite;
+}
+
+.s3 .iconbtn {
+  border: 4px solid #fff;
+  color: #05004e;
+}
+
+.s3 .iconbtn::after {
+  background: #76b39d;
+  transition: .2s;
+}
+
+.s3 .iconbtn:hover::after {
+  transform: scale(.9);
+}
+
+.s4 .iconbtn {
+  border: 4px solid #d7eaea;
+  color: #acdbdf;
+}
+
+.s4 .iconbtn::after {
+  background: #9692af;
+  transition: .4s;
+}
+
+.s4 .iconbtn:hover::after {
+  transform: scale(1.3);
+  opacity: 0;
+}
+
+@keyframes ro {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
